@@ -14,13 +14,10 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-deep flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
         <Sidebar />
-        <main
-          className="flex-1 pt-14 transition-all duration-300 lg:ml-72"
-          style={{ marginLeft: undefined }}
-        >
+        <main className="flex-1 pt-14 transition-all duration-300 lg:ml-72">
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/simulation" element={<SimulationPage />} />

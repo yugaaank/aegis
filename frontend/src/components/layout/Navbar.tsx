@@ -14,17 +14,17 @@ export default function Navbar() {
   const { toggleSidebar, sidebarOpen } = useSimulationStore()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-14 z-50 flex items-center px-4 border-b border-border-subtle"
+    <nav className="fixed top-0 left-0 right-0 h-14 z-50 flex items-center px-6 flex items-center border-b border-border-subtle"
       style={{ background: 'rgba(3, 7, 18, 0.85)', backdropFilter: 'blur(12px)' }}>
       <div className="flex items-center gap-3 mr-6">
-        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-blue flex items-center justify-center">
+        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-linkDark flex items-center justify-center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />
             <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)" />
             <circle cx="12" cy="12" r="2" fill="white" />
           </svg>
         </div>
-        <span className="font-display font-bold text-lg tracking-tight text-gradient-cyan">
+        <span className="font-display font-bold text-lg tracking-tight text-primary">
           ORBITAL SHIELD
         </span>
       </div>
@@ -36,7 +36,7 @@ export default function Navbar() {
             to={link.path}
             className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
               location.pathname === link.path
-                ? 'text-accent-cyan bg-accent-cyan/10'
+                ? 'text-primary bg-primary/10'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >

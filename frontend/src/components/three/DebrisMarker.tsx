@@ -1,48 +1,40 @@
-import { useRef, useMemo } from 'react'
+import { useRef, useMemo, useCallback } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useSimulationStore } from '../../store/simulationStore'
-import { RISK_COLORS } from '../../types'
+import { getPosition, distanceBetween } from '../../utils/orbital'
 
-const MU = 398600.4418
-const DEG = Math.PI / 180
-
-function solveKepler(M: number, e: number): number {
-  let E = M
-  for (let i = 0; i < 20; i++) {
-    const dE = (E - e * Math.sin(E) - M) / (1 - e * Math.cos(E))
-    E -= dE
-    if (Math.abs(dE) < 1e-10) break
-  }
-  return E
-}
-
-function getPosition(
-  a: number, e: number, inc: number, raan: number, argp: number, M0: number, t: number
-): [number, number, number] {
-  const n = Math.sqrt(MU / (a * a * a))
-  const M = ((M0 * DEG + n * t) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI)
-  const E = solveKepler(M, e)
-  const nu = 2 * Math.atan2(
-    Math.sqrt(1 + e) * Math.sin(E / 2),
-    Math.sqrt(1 - e) * Math.cos(E / 2)
-  )
-  const r = a * (1 - e * e) / (1 + e * Math.cos(nu))
-  const xOrb = r * Math.cos(nu)
-  const yOrb = r * Math.sin(nu)
-  const cosA = Math.cos(argp * DEG), sinA = Math.sin(argp * DEG)
-  const cosI = Math.cos(inc * DEG), sinI = Math.sin(inc * DEG)
-  const cosR = Math.cos(raan * DEG), sinR = Math.sin(raan * DEG)
-  const x = (cosA * cosR - sinA * sinR * cosI) * xOrb + (-sinA * cosR - cosA * sinR * cosI) * yOrb
-  const y = (cosA * sinR + sinA * cosR * cosI) * xOrb + (-sinA * sinR + cosA * cosR * cosI) * yOrb
-  const z = (sinA * sinI) * xOrb + (cosA * sinI) * yOrb
-  return [x, z, -y]
-}
-
-function DebrisDot({ debris, riskLevel }: { debris: any; riskLevel?: string }) {
+function DebrisDot({ debris }: { debris: any }) {
   const meshRef = useRef<THREE.Mesh>(null)
-  const { currentTime } = useSimulationStore()
-  const color = riskLevel ? RISK_COLORS[riskLevel as keyof typeof RISK_COLORS] : '#f97316'
+  const { satellite, currentTime, result, selectedObject, selectObject } = useSimulationStore()
+
+  const isSelected = selectedObject === debris.id
+
+  const riskColor = useMemo(() => {
+    if (!result) return '#d53b00'
+    const approach = result.approaches.find((a: any) => a.debris_id === debris.id)
+    if (!approach) return '#d53b00'
+    switch (approach.risk_level) {
+      case 'CRITICAL': return '#ef4444'
+      case 'HIGH': return '#f97316'
+      case 'MODERATE': return '#eab308'
+      case 'LOW': return '#22c55e'
+      default: return '#d53b00'
+    }
+  }, [result, debris.id])
+
+  const distColor = useMemo(() => {
+    if (!satellite || !result) return riskColor
+    const approach = result.approaches.find((a: any) => a.debris_id === debris.id)
+    if (!approach) return riskColor
+    const d = approach.min_distance_km
+    if (d < 100) return '#ef4444'
+    if (d < 300) return '#f97316'
+    if (d < 500) return '#eab308'
+    return '#22c55e'
+  }, [satellite, result, debris.id, riskColor])
+
+  const color = satellite ? distColor : riskColor
 
   useFrame(() => {
     if (!meshRef.current) return
@@ -54,28 +46,28 @@ function DebrisDot({ debris, riskLevel }: { debris: any; riskLevel?: string }) {
     meshRef.current.position.set(x, y, z)
   })
 
+  const handleClick = useCallback((e: any) => {
+    e.stopPropagation()
+    selectObject(isSelected ? null : debris.id)
+  }, [debris.id, isSelected, selectObject])
+
   return (
-    <mesh ref={meshRef}>
-      <sphereGeometry args={[30, 8, 8]} />
-      <meshBasicMaterial color={color} transparent opacity={0.8} />
-    </mesh>
+    <group>
+      <mesh ref={meshRef} onClick={handleClick}>
+        <sphereGeometry args={[isSelected ? 45 : 30, 8, 8]} />
+        <meshBasicMaterial color={color} transparent opacity={isSelected ? 1 : 0.8} />
+      </mesh>
+    </group>
   )
 }
 
 export default function DebrisMarkers() {
-  const { debrisList, result } = useSimulationStore()
-
-  const riskMap = useMemo(() => {
-    if (!result) return {}
-    const map: Record<string, string> = {}
-    result.approaches.forEach((a) => { map[a.debris_id] = a.risk_level })
-    return map
-  }, [result])
+  const { debrisList } = useSimulationStore()
 
   return (
     <group>
       {debrisList.map((d) => (
-        <DebrisDot key={d.id} debris={d} riskLevel={riskMap[d.id]} />
+        <DebrisDot key={d.id} debris={d} />
       ))}
     </group>
   )

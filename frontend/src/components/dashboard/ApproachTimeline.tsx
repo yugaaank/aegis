@@ -20,22 +20,23 @@ export default function ApproachTimeline({ approaches }: { approaches: ClosestAp
           <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
           <XAxis
             dataKey="name"
-            tick={{ fill: '#475569', fontSize: 10, fontFamily: 'JetBrains Mono' }}
+            tick={{ fill: '#6b6b6b', fontSize: 10, fontFamily: 'JetBrains Mono' }}
             angle={-45}
             textAnchor="end"
             height={50}
           />
           <YAxis
-            tick={{ fill: '#475569', fontSize: 10, fontFamily: 'JetBrains Mono' }}
-            label={{ value: 'km', angle: -90, position: 'insideLeft', fill: '#475569', fontSize: 10 }}
+            tick={{ fill: '#6b6b6b', fontSize: 10, fontFamily: 'JetBrains Mono' }}
+            label={{ value: 'km', angle: -90, position: 'insideLeft', fill: '#6b6b6b', fontSize: 10 }}
           />
           <Tooltip
             contentStyle={{
-              background: '#0a0f1e',
-              border: '1px solid #1e293b',
+              background: '#181818',
+              border: '1px solid rgba(229,229,229,0.2)',
               borderRadius: '8px',
               fontSize: '12px',
               fontFamily: 'JetBrains Mono',
+              color: '#ffffff',
             }}
             formatter={(value: number) => [`${value.toFixed(1)} km`, 'Distance']}
           />

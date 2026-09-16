@@ -15,7 +15,7 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background: #030712;
+    background: #0a0f1e;
     color: #f1f5f9;
     overflow-x: hidden;
   }
@@ -26,85 +26,116 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0a0f1e;
+    background: #1e293b;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1e293b;
+    background: #334155;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    background: #475569;
   }
 
   ::selection {
-    background: rgba(6, 182, 212, 0.3);
-    color: #f1f5f9;
+    background: rgba(0, 112, 209, 0.15);
+    color: #ffffff;
   }
 
   ::-moz-selection {
-    background: rgba(6, 182, 212, 0.3);
-    color: #f1f5f9;
+    background: rgba(0, 112, 209, 0.15);
+    color: #ffffff;
   }
 }
 
 @layer components {
-  .glass-panel {
-    background: rgba(10, 15, 30, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(6, 182, 212, 0.15);
-    border-radius: 12px;
-    transition: border-color 0.3s ease;
-  }
-
-  .glass-panel:hover {
-    border-color: rgba(6, 182, 212, 0.3);
-  }
-
-  .neon-btn {
-    background: linear-gradient(135deg, #06b6d4, #3b82f6);
-    color: white;
-    font-weight: 600;
-    padding: 0.625rem 1.5rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  .button-primary {
+    background-color: #0070d1;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 12px 28px;
+    height: 48px;
     transition: all 0.2s ease;
-    font-family: 'Space Grotesk', sans-serif;
   }
 
-  .neon-btn:hover {
-    box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
-    transform: translateY(-1px);
+  .button-primary:hover {
+    background-color: #0064b7;
   }
 
-  .neon-btn:active {
-    transform: scale(0.98);
-  }
-
-  .neon-btn:disabled {
-    opacity: 0.5;
+  .button-primary:disabled {
+    opacity: 0.4;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
   }
 
-  .scanline-overlay {
-    pointer-events: none;
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(6, 182, 212, 0.03) 2px,
-      rgba(6, 182, 212, 0.03) 4px
-    );
-    z-index: 1;
-    animation: scanline 8s linear infinite;
+  .button-primary:active {
+    transform: scale(0.98);
+  }
+
+  .button-commerce {
+    background-color: #d53b00;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 12px 28px;
+    height: 48px;
+    transition: all 0.2s ease;
+  }
+
+  .button-commerce:hover {
+    background-color: #aa2f00;
+  }
+
+  .button-commerce:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .button-secondary-light {
+    background-color: transparent;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 12px 28px;
+    height: 48px;
+    border: 1px solid #cccccc;
+    transition: all 0.2s ease;
+  }
+
+  .button-secondary-light:hover {
+    border-color: #999999;
+    color: #333333;
+  }
+
+  .button-secondary-dark {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 12px 28px;
+    height: 48px;
+    border: 1px solid rgba(229, 229, 229, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .button-secondary-dark:hover {
+    border-color: rgba(229, 229, 229, 0.4);
+    color: #ffffff;
+  }
+
+  .card {
+    background: rgba(3, 7, 18, 0.7);
+    border: 1px solid #1e293b;
+    border-radius: 12px;
   }
 
   .risk-badge {
@@ -123,13 +154,11 @@
   .risk-badge-critical {
     background: rgba(239, 68, 68, 0.15);
     color: #ef4444;
-    box-shadow: 0 0 12px rgba(239, 68, 68, 0.2);
   }
 
   .risk-badge-high {
     background: rgba(249, 115, 22, 0.15);
     color: #f97316;
-    box-shadow: 0 0 12px rgba(249, 115, 22, 0.2);
   }
 
   .risk-badge-moderate {
@@ -146,22 +175,11 @@
     font-family: 'JetBrains Mono', monospace;
     font-variant-numeric: tabular-nums;
   }
-}
 
-@layer utilities {
-  .text-gradient-cyan {
-    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #0070d1, #0064b7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  .border-glow-cyan {
-    border-color: rgba(6, 182, 212, 0.3);
-    box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
-  }
-
-  .shadow-neon {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2), 0 0 40px rgba(6, 182, 212, 0.1);
   }
 }

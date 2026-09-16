@@ -44,9 +44,9 @@ export default function RiskDonut({ approaches }: { approaches: ClosestApproachR
         {(Object.keys(counts) as RiskLevel[]).map((level) => (
           <div key={level} className="flex items-center gap-2.5">
             <div className="w-2.5 h-2.5 rounded-full" style={{ background: RISK_COLORS[level] }} />
-            <span className="text-xs text-slate-400 flex-1">{level}</span>
-            <span className="text-xs font-mono text-slate-300">{counts[level]}</span>
-            <span className="text-[10px] font-mono text-slate-600 w-10 text-right">
+            <span className="text-xs text-on-dark/60 flex-1">{level}</span>
+            <span className="text-xs font-mono text-on-dark/50">{counts[level]}</span>
+            <span className="text-[10px] font-mono text-on-dark/400 w-10 text-right">
               {total > 0 ? ((counts[level] / total) * 100).toFixed(0) : 0}%
             </span>
           </div>

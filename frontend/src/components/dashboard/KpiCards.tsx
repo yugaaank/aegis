@@ -15,14 +15,14 @@ export default function KpiCards({ result }: { result: SimulationResponse }) {
         label="Total Pairs"
         value={result.approaches.length}
         suffix=""
-        color="#06b6d4"
+        color="#0070d1"
         delay={0}
       />
       <KpiCard
         label="Critical"
         value={critical}
         suffix=""
-        color={RISK_COLORS.CRITICAL}
+        color="#ef4444"
         delay={100}
         pulse={critical > 0}
       />
@@ -30,14 +30,14 @@ export default function KpiCards({ result }: { result: SimulationResponse }) {
         label="High Risk"
         value={high}
         suffix=""
-        color={RISK_COLORS.HIGH}
+        color="#f97316"
         delay={200}
       />
       <KpiCard
         label="Nearest Approach"
         value={nearest}
         suffix=" km"
-        color="#06b6d4"
+        color="#0070d1"
         delay={300}
         decimals={1}
       />
@@ -78,21 +78,21 @@ function KpiCard({
 
   return (
     <div
-      className="glass-panel p-4 relative overflow-hidden group"
+      className="card p-4 relative overflow-hidden group"
       style={{ opacity: 0, animation: `fade-up 0.5s ease-out ${delay}ms forwards` }}
     >
       <div
         className="absolute top-0 left-0 w-full h-0.5 opacity-60"
         style={{ background: `linear-gradient(90deg, ${color}, transparent)` }}
       />
-      <div className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-2">
+      <div className="text-xs text-on-dark/60 font-medium uppercase tracking-wider mb-2">
         {label}
       </div>
-      <div className="font-display font-bold text-2xl" style={{ color }}>
+      <div className="font-display font-bold text-2xl text-primary">
         <span className="data-value">
           {decimals > 0 ? display.toFixed(decimals) : Math.round(display)}
         </span>
-        {suffix && <span className="text-sm font-normal text-slate-500 ml-1">{suffix}</span>}
+        {suffix && <span className="text-sm font-normal text-on-dark/50 ml-1">{suffix}</span>}
       </div>
       {pulse && (
         <div className="absolute -top-1 -right-1 w-3 h-3">
