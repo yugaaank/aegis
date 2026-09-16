@@ -1,0 +1,668 @@
+{
+  "satellite": {
+    "id": "sat_001",
+    "name": "ISS-like Target",
+    "type": "satellite",
+    "orbital_elements": {
+      "semi_major_axis_km": 6771.0,
+      "eccentricity": 0.0002,
+      "inclination_deg": 51.6,
+      "raan_deg": 0.0,
+      "arg_perigee_deg": 0.0,
+      "mean_anomaly_deg": 0.0
+    }
+  },
+  "debris": [
+    {
+      "id": "debris_001",
+      "name": "Iridium 33 Fragment 1",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7217.731,
+        "eccentricity": 0.002437,
+        "inclination_deg": 87.162,
+        "raan_deg": 348.903,
+        "arg_perigee_deg": 280.35,
+        "mean_anomaly_deg": 258.08
+      }
+    },
+    {
+      "id": "debris_002",
+      "name": "Iridium 33 Fragment 2",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7187.213,
+        "eccentricity": 0.008672,
+        "inclination_deg": 83.8,
+        "raan_deg": 98.007,
+        "arg_perigee_deg": 34.701,
+        "mean_anomaly_deg": 324.937
+      }
+    },
+    {
+      "id": "debris_003",
+      "name": "Iridium 33 Fragment 3",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7197.291,
+        "eccentricity": 0.026806,
+        "inclination_deg": 88.276,
+        "raan_deg": 72.851,
+        "arg_perigee_deg": 110.144,
+        "mean_anomaly_deg": 208.519
+      }
+    },
+    {
+      "id": "debris_004",
+      "name": "Iridium 33 Fragment 4",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7216.182,
+        "eccentricity": 0.001883,
+        "inclination_deg": 88.751,
+        "raan_deg": 308.381,
+        "arg_perigee_deg": 273.067,
+        "mean_anomaly_deg": 259.007
+      }
+    },
+    {
+      "id": "debris_005",
+      "name": "Iridium 33 Fragment 5",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7135.729,
+        "eccentricity": 0.014654,
+        "inclination_deg": 81.522,
+        "raan_deg": 225.831,
+        "arg_perigee_deg": 210.275,
+        "mean_anomaly_deg": 233.945
+      }
+    },
+    {
+      "id": "debris_006",
+      "name": "Iridium 33 Fragment 6",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7163.185,
+        "eccentricity": 0.01047,
+        "inclination_deg": 83.145,
+        "raan_deg": 149.691,
+        "arg_perigee_deg": 14.981,
+        "mean_anomaly_deg": 177.837
+      }
+    },
+    {
+      "id": "debris_007",
+      "name": "Iridium 33 Fragment 7",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7055.949,
+        "eccentricity": 0.026702,
+        "inclination_deg": 86.72,
+        "raan_deg": 52.029,
+        "arg_perigee_deg": 37.225,
+        "mean_anomaly_deg": 211.552
+      }
+    },
+    {
+      "id": "debris_008",
+      "name": "Iridium 33 Fragment 8",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7049.633,
+        "eccentricity": 0.002795,
+        "inclination_deg": 85.609,
+        "raan_deg": 333.043,
+        "arg_perigee_deg": 209.182,
+        "mean_anomaly_deg": 124.873
+      }
+    },
+    {
+      "id": "debris_009",
+      "name": "Iridium 33 Fragment 9",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7188.101,
+        "eccentricity": 0.022703,
+        "inclination_deg": 86.358,
+        "raan_deg": 8.209,
+        "arg_perigee_deg": 345.081,
+        "mean_anomaly_deg": 173.629
+      }
+    },
+    {
+      "id": "debris_010",
+      "name": "Iridium 33 Fragment 10",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7138.774,
+        "eccentricity": 0.01627,
+        "inclination_deg": 84.267,
+        "raan_deg": 29.783,
+        "arg_perigee_deg": 175.197,
+        "mean_anomaly_deg": 176.655
+      }
+    },
+    {
+      "id": "debris_011",
+      "name": "Iridium 33 Fragment 11",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7162.309,
+        "eccentricity": 0.018288,
+        "inclination_deg": 88.598,
+        "raan_deg": 205.822,
+        "arg_perigee_deg": 170.456,
+        "mean_anomaly_deg": 96.111
+      }
+    },
+    {
+      "id": "debris_012",
+      "name": "Iridium 33 Fragment 12",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7212.25,
+        "eccentricity": 0.006259,
+        "inclination_deg": 88.344,
+        "raan_deg": 187.442,
+        "arg_perigee_deg": 158.008,
+        "mean_anomaly_deg": 7.78
+      }
+    },
+    {
+      "id": "debris_013",
+      "name": "Iridium 33 Fragment 13",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7179.68,
+        "eccentricity": 0.03132,
+        "inclination_deg": 86.565,
+        "raan_deg": 322.618,
+        "arg_perigee_deg": 50.49,
+        "mean_anomaly_deg": 199.453
+      }
+    },
+    {
+      "id": "debris_014",
+      "name": "Iridium 33 Fragment 14",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7159.395,
+        "eccentricity": 0.023494,
+        "inclination_deg": 89.218,
+        "raan_deg": 242.006,
+        "arg_perigee_deg": 101.244,
+        "mean_anomaly_deg": 237.392
+      }
+    },
+    {
+      "id": "debris_015",
+      "name": "Iridium 33 Fragment 15",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7160.802,
+        "eccentricity": 0.045359,
+        "inclination_deg": 87.569,
+        "raan_deg": 276.713,
+        "arg_perigee_deg": 38.787,
+        "mean_anomaly_deg": 329.764
+      }
+    },
+    {
+      "id": "debris_016",
+      "name": "Iridium 33 Fragment 16",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7096.988,
+        "eccentricity": 0.013699,
+        "inclination_deg": 84.252,
+        "raan_deg": 13.469,
+        "arg_perigee_deg": 199.747,
+        "mean_anomaly_deg": 133.532
+      }
+    },
+    {
+      "id": "debris_017",
+      "name": "Iridium 33 Fragment 17",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7028.704,
+        "eccentricity": 0.006428,
+        "inclination_deg": 87.322,
+        "raan_deg": 290.971,
+        "arg_perigee_deg": 114.17,
+        "mean_anomaly_deg": 343.044
+      }
+    },
+    {
+      "id": "debris_018",
+      "name": "Iridium 33 Fragment 18",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7130.179,
+        "eccentricity": 0.017699,
+        "inclination_deg": 84.003,
+        "raan_deg": 185.421,
+        "arg_perigee_deg": 92.147,
+        "mean_anomaly_deg": 336.976
+      }
+    },
+    {
+      "id": "debris_019",
+      "name": "Iridium 33 Fragment 19",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7074.646,
+        "eccentricity": 0.018921,
+        "inclination_deg": 88.596,
+        "raan_deg": 16.168,
+        "arg_perigee_deg": 156.635,
+        "mean_anomaly_deg": 357.255
+      }
+    },
+    {
+      "id": "debris_020",
+      "name": "Iridium 33 Fragment 20",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7123.132,
+        "eccentricity": 0.013452,
+        "inclination_deg": 86.275,
+        "raan_deg": 269.499,
+        "arg_perigee_deg": 320.685,
+        "mean_anomaly_deg": 321.641
+      }
+    },
+    {
+      "id": "debris_021",
+      "name": "Iridium 33 Fragment 21",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7234.351,
+        "eccentricity": 0.015717,
+        "inclination_deg": 85.938,
+        "raan_deg": 113.734,
+        "arg_perigee_deg": 277.924,
+        "mean_anomaly_deg": 238.198
+      }
+    },
+    {
+      "id": "debris_022",
+      "name": "Iridium 33 Fragment 22",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7079.485,
+        "eccentricity": 0.032126,
+        "inclination_deg": 84.698,
+        "raan_deg": 34.008,
+        "arg_perigee_deg": 268.844,
+        "mean_anomaly_deg": 94.486
+      }
+    },
+    {
+      "id": "debris_023",
+      "name": "Iridium 33 Fragment 23",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7035.576,
+        "eccentricity": 0.014489,
+        "inclination_deg": 89.456,
+        "raan_deg": 86.749,
+        "arg_perigee_deg": 44.193,
+        "mean_anomaly_deg": 299.201
+      }
+    },
+    {
+      "id": "debris_024",
+      "name": "Iridium 33 Fragment 24",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7091.346,
+        "eccentricity": 0.00641,
+        "inclination_deg": 86.014,
+        "raan_deg": 64.537,
+        "arg_perigee_deg": 215.778,
+        "mean_anomaly_deg": 314.842
+      }
+    },
+    {
+      "id": "debris_025",
+      "name": "Iridium 33 Fragment 25",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7094.398,
+        "eccentricity": 0.038108,
+        "inclination_deg": 85.329,
+        "raan_deg": 111.717,
+        "arg_perigee_deg": 279.866,
+        "mean_anomaly_deg": 349.858
+      }
+    },
+    {
+      "id": "debris_026",
+      "name": "Cosmos 2251 Fragment 26",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7186.479,
+        "eccentricity": 0.009898,
+        "inclination_deg": 73.12,
+        "raan_deg": 51.803,
+        "arg_perigee_deg": 5.017,
+        "mean_anomaly_deg": 82.676
+      }
+    },
+    {
+      "id": "debris_027",
+      "name": "Cosmos 2251 Fragment 27",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7160.258,
+        "eccentricity": 0.011812,
+        "inclination_deg": 75.331,
+        "raan_deg": 243.957,
+        "arg_perigee_deg": 43.86,
+        "mean_anomaly_deg": 182.279
+      }
+    },
+    {
+      "id": "debris_028",
+      "name": "Cosmos 2251 Fragment 28",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7216.975,
+        "eccentricity": 0.006865,
+        "inclination_deg": 74.914,
+        "raan_deg": 209.202,
+        "arg_perigee_deg": 71.919,
+        "mean_anomaly_deg": 289.485
+      }
+    },
+    {
+      "id": "debris_029",
+      "name": "Cosmos 2251 Fragment 29",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7187.078,
+        "eccentricity": 0.028318,
+        "inclination_deg": 75.032,
+        "raan_deg": 266.034,
+        "arg_perigee_deg": 47.181,
+        "mean_anomaly_deg": 44.551
+      }
+    },
+    {
+      "id": "debris_030",
+      "name": "Cosmos 2251 Fragment 30",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7122.597,
+        "eccentricity": 0.01977,
+        "inclination_deg": 75.077,
+        "raan_deg": 143.128,
+        "arg_perigee_deg": 108.342,
+        "mean_anomaly_deg": 175.89
+      }
+    },
+    {
+      "id": "debris_031",
+      "name": "Cosmos 2251 Fragment 31",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7224.505,
+        "eccentricity": 0.020762,
+        "inclination_deg": 79.354,
+        "raan_deg": 344.024,
+        "arg_perigee_deg": 103.121,
+        "mean_anomaly_deg": 332.931
+      }
+    },
+    {
+      "id": "debris_032",
+      "name": "Cosmos 2251 Fragment 32",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7062.743,
+        "eccentricity": 0.005523,
+        "inclination_deg": 72.984,
+        "raan_deg": 199.871,
+        "arg_perigee_deg": 228.231,
+        "mean_anomaly_deg": 38.123
+      }
+    },
+    {
+      "id": "debris_033",
+      "name": "Cosmos 2251 Fragment 33",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7026.678,
+        "eccentricity": 0.01181,
+        "inclination_deg": 72.719,
+        "raan_deg": 150.881,
+        "arg_perigee_deg": 347.843,
+        "mean_anomaly_deg": 214.575
+      }
+    },
+    {
+      "id": "debris_034",
+      "name": "Cosmos 2251 Fragment 34",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7043.512,
+        "eccentricity": 0.007065,
+        "inclination_deg": 71.966,
+        "raan_deg": 289.57,
+        "arg_perigee_deg": 168.257,
+        "mean_anomaly_deg": 282.515
+      }
+    },
+    {
+      "id": "debris_035",
+      "name": "Cosmos 2251 Fragment 35",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7201.59,
+        "eccentricity": 0.016312,
+        "inclination_deg": 75.54,
+        "raan_deg": 39.292,
+        "arg_perigee_deg": 298.594,
+        "mean_anomaly_deg": 286.854
+      }
+    },
+    {
+      "id": "debris_036",
+      "name": "Cosmos 2251 Fragment 36",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7136.469,
+        "eccentricity": 0.032946,
+        "inclination_deg": 76.822,
+        "raan_deg": 191.077,
+        "arg_perigee_deg": 218.166,
+        "mean_anomaly_deg": 312.386
+      }
+    },
+    {
+      "id": "debris_037",
+      "name": "Cosmos 2251 Fragment 37",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7061.318,
+        "eccentricity": 0.054221,
+        "inclination_deg": 73.715,
+        "raan_deg": 148.526,
+        "arg_perigee_deg": 134.706,
+        "mean_anomaly_deg": 153.318
+      }
+    },
+    {
+      "id": "debris_038",
+      "name": "Cosmos 2251 Fragment 38",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7146.261,
+        "eccentricity": 0.008115,
+        "inclination_deg": 71.9,
+        "raan_deg": 312.297,
+        "arg_perigee_deg": 163.403,
+        "mean_anomaly_deg": 89.222
+      }
+    },
+    {
+      "id": "debris_039",
+      "name": "Cosmos 2251 Fragment 39",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7059.078,
+        "eccentricity": 0.015748,
+        "inclination_deg": 71.939,
+        "raan_deg": 268.565,
+        "arg_perigee_deg": 293.965,
+        "mean_anomaly_deg": 37.9
+      }
+    },
+    {
+      "id": "debris_040",
+      "name": "Cosmos 2251 Fragment 40",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7195.08,
+        "eccentricity": 0.013431,
+        "inclination_deg": 75.626,
+        "raan_deg": 213.996,
+        "arg_perigee_deg": 52.622,
+        "mean_anomaly_deg": 296.879
+      }
+    },
+    {
+      "id": "debris_041",
+      "name": "Cosmos 2251 Fragment 41",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7132.539,
+        "eccentricity": 0.009737,
+        "inclination_deg": 75.858,
+        "raan_deg": 51.794,
+        "arg_perigee_deg": 331.549,
+        "mean_anomaly_deg": 59.591
+      }
+    },
+    {
+      "id": "debris_042",
+      "name": "Cosmos 2251 Fragment 42",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7116.255,
+        "eccentricity": 0.002477,
+        "inclination_deg": 75.358,
+        "raan_deg": 55.301,
+        "arg_perigee_deg": 41.576,
+        "mean_anomaly_deg": 7.613
+      }
+    },
+    {
+      "id": "debris_043",
+      "name": "Cosmos 2251 Fragment 43",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7096.378,
+        "eccentricity": 0.004672,
+        "inclination_deg": 72.336,
+        "raan_deg": 62.871,
+        "arg_perigee_deg": 19.217,
+        "mean_anomaly_deg": 212.812
+      }
+    },
+    {
+      "id": "debris_044",
+      "name": "Cosmos 2251 Fragment 44",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7178.571,
+        "eccentricity": 0.030254,
+        "inclination_deg": 74.58,
+        "raan_deg": 141.707,
+        "arg_perigee_deg": 114.477,
+        "mean_anomaly_deg": 181.629
+      }
+    },
+    {
+      "id": "debris_045",
+      "name": "Cosmos 2251 Fragment 45",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7111.453,
+        "eccentricity": 0.010002,
+        "inclination_deg": 74.292,
+        "raan_deg": 306.407,
+        "arg_perigee_deg": 15.651,
+        "mean_anomaly_deg": 65.339
+      }
+    },
+    {
+      "id": "debris_046",
+      "name": "Cosmos 2251 Fragment 46",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7042.912,
+        "eccentricity": 0.066282,
+        "inclination_deg": 74.547,
+        "raan_deg": 89.78,
+        "arg_perigee_deg": 205.644,
+        "mean_anomaly_deg": 149.854
+      }
+    },
+    {
+      "id": "debris_047",
+      "name": "Cosmos 2251 Fragment 47",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7050.501,
+        "eccentricity": 0.005261,
+        "inclination_deg": 76.179,
+        "raan_deg": 134.501,
+        "arg_perigee_deg": 188.551,
+        "mean_anomaly_deg": 36.602
+      }
+    },
+    {
+      "id": "debris_048",
+      "name": "Cosmos 2251 Fragment 48",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7261.474,
+        "eccentricity": 0.033823,
+        "inclination_deg": 74.559,
+        "raan_deg": 18.706,
+        "arg_perigee_deg": 332.943,
+        "mean_anomaly_deg": 35.681
+      }
+    },
+    {
+      "id": "debris_049",
+      "name": "Cosmos 2251 Fragment 49",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7248.145,
+        "eccentricity": 0.028549,
+        "inclination_deg": 75.697,
+        "raan_deg": 324.955,
+        "arg_perigee_deg": 352.645,
+        "mean_anomaly_deg": 288.729
+      }
+    },
+    {
+      "id": "debris_050",
+      "name": "Cosmos 2251 Fragment 50",
+      "type": "debris",
+      "orbital_elements": {
+        "semi_major_axis_km": 7195.927,
+        "eccentricity": 0.015274,
+        "inclination_deg": 74.169,
+        "raan_deg": 231.294,
+        "arg_perigee_deg": 280.439,
+        "mean_anomaly_deg": 48.439
+      }
+    }
+  ],
+  "source": "Synthetic based on Iridium 33 / Cosmos 2251 debris characteristics"
+}

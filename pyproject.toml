@@ -1,0 +1,25 @@
+[project]
+name = "aegis"
+version = "1.0.0"
+description = "Space debris collision risk estimator — Keplerian orbit propagation + closest approach detection"
+authors = [
+    { name = "yugaaank", email = "yugaankrathore0@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "numpy>=2.5.3",
+    "pandas>=3.0.5",
+    "pydantic>=2.13.5",
+    "pytest>=9.1.1",
+    "scipy>=1.18.1",
+    "uvicorn>=0.53.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
