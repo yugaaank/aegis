@@ -1,4 +1,3 @@
-import { useRef, useState, useCallback } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Earth from './Earth'
 import OrbitPaths from './OrbitPath'
@@ -8,11 +7,6 @@ import Starfield from './Starfield'
 import CameraController from './CameraController'
 
 export default function Scene() {
-  const [domElement, setDomElement] = useState<EventTarget | null>(null)
-  const overlayRef = useCallback((node: HTMLDivElement | null) => {
-    if (node) setDomElement(node)
-  }, [])
-
   return (
     <div className="absolute inset-0">
       <Canvas
@@ -31,13 +25,8 @@ export default function Scene() {
         <OrbitPaths />
         <SatelliteMarker />
         <DebrisMarkers />
-        <CameraController domElement={domElement as HTMLElement} />
+        <CameraController />
       </Canvas>
-      <div
-        ref={overlayRef}
-        className="absolute inset-0"
-        style={{ pointerEvents: 'auto', zIndex: 1 }}
-      />
     </div>
   )
 }
